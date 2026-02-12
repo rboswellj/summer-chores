@@ -1,22 +1,4 @@
 #!/usr/bin/env node
-/*
-
-List of Chores:
-
-Mowing the yard
-Weedeating the edges of the house and fence line
-Trimming the hedges
-Collect fallen wood for summer night fires
-Water the garden
-
-Time to mow the yard.	2000
-Time to weed eat the yard.	1500
-Time to trim the hedges.	1000
-Time to collect wood.	2500
-Time to water the garden.	500
-
-*/
-
 
 let user = "Rob";
 
