@@ -84,15 +84,19 @@ function waterGarden(name){
     return promise;
 };
 
-function doSummerChores(name) {
+async function doSummerChores(name) {
     let message = `${name} finished all their chores!`;
-    mowYard(name)
-        .then(() => weedEat(name))
-        .then(() => trimHedges(name))
-        .then(() => collectWood(name))
-        .then(() => waterGarden(name))
-        .then(() => console.log(message))
-        .catch(() => console.log(`${name} couldn't finish all the chores today.`));
+    try {
+        await mowYard(name);
+        await weedEat(name);
+        await trimHedges(name);
+        await collectWood(name);
+        await waterGarden(name);
+        console.log(message);
+    } catch (error) {
+        // Handle any errors that occur during the chores
+        console.log(`${name} couldn't finish all the chores due to exhaustion.`);
+    }
 };
 
 // Start the chores for the current user

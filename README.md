@@ -17,3 +17,6 @@ Uses a series of callback functions to achieve the asynchornus operations.
 
 Promise Version (promiseVersion.js)
 Achieves the same thing, but with promises instead of callbacks.
+
+Async Await Version (asyncAwaitVersion.js)
+Maintained the same promises within the functions but converted doSummerCores function into an async function and made the calls to the individual chores with a series of await calls inside of a try catch. Any catch results in a failure to complete chores.
